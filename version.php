@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2017102000;      // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2018072500;      // The current plugin version (Date: YYYYMMDDXX).
 $plugin->release   = 2017102000;      // Same as version.
 $plugin->requires  = 2013111811;
 $plugin->component = "local_azure_storage";

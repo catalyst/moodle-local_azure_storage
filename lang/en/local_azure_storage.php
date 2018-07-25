@@ -26,3 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Azure Object Storage SDK for PHP';
+/*
+ * GDPR compliant
+ */
+$string['privacy:no_data_reason'] = "The Azure Object Storage plugin doesn't store any personal data.";
