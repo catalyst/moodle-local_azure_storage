@@ -24,7 +24,7 @@
 
 namespace MicrosoftAzure\Storage\Blob;
 
-use GuzzleHttp\Psr7;
+use GuzzleHttpLocal\Psr7;
 use MicrosoftAzure\Storage\Blob\Internal\IBlob;
 use MicrosoftAzure\Storage\Blob\Models\AppendBlockOptions;
 use MicrosoftAzure\Storage\Blob\Models\AppendBlockResult;
@@ -282,7 +282,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $operation The operation string. Should be
      * 'metadata' to get metadata.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function getContainerPropertiesAsyncImpl(
         $container,
@@ -470,7 +470,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param Models\BlobServiceOptions $options            Optional parameters.
      * @param Models\AccessCondition    $accessCondition    Access conditions.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function putLeaseAsyncImpl(
         $leaseAction,
@@ -562,7 +562,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                 $content   The content string.
      * @param CreateBlobPagesOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function updatePageBlobPagesAsyncImpl(
         $action,
@@ -667,7 +667,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      *
      * @param  ListContainersOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function listContainersAsync(
         ListContainersOptions $options = null
@@ -753,7 +753,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                        $container The container name.
      * @param Models\CreateContainerOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179468.aspx
      */
@@ -819,7 +819,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param  string                             $container name of the container
      * @param  Models\BlobServiceOptions|null     $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function deleteContainerAsync(
         $container,
@@ -891,7 +891,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $container name
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179370.aspx
      */
@@ -926,7 +926,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $container name
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691976.aspx
      */
@@ -962,7 +962,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $container The container name.
      * @param Models\BlobServiceOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179469.aspx
      */
@@ -1068,7 +1068,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param Models\ContainerACL       $acl       access control list for container
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179391.aspx
      */
@@ -1161,7 +1161,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param array                    $metadata  metadata key/value pair.
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179362.aspx
      */
@@ -1240,7 +1240,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                  $container The container name.
      * @param Models\ListBlobsOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd135734.aspx
      */
@@ -1378,7 +1378,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      *                                            boundary.
      * @param Models\CreateBlobOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -1471,7 +1471,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                   $blob      The blob name.
      * @param Models\CreateBlobOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -1569,7 +1569,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string|resource|StreamInterface $content   The content of the blob.
      * @param Models\CreateBlobOptions        $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -1647,7 +1647,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string|resource|StreamInterface $content   The content of the blob.
      * @param Models\CreateBlobOptions        $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/get-blob-properties
      */
@@ -1724,7 +1724,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param StreamInterface          $content   The content of the blob.
      * @param Models\CreateBlobOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -1796,7 +1796,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param  Models\CreateBlobOptions $options    Array that contains
      *                                                     all the option
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     protected function createBlockBlobByMultipleUploadAsync(
         $container,
@@ -1915,7 +1915,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param  Models\CreateBlobOptions $options    Array that contains
      *                                                     all the option
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function uploadPageBlobAsync(
         $container,
@@ -2064,7 +2064,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      *                                                 512-1023)
      * @param Models\CreateBlobPagesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691975.aspx
      */
@@ -2128,7 +2128,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string|resource|StreamInterface $content   the blob contents.
      * @param Models\CreateBlobPagesOptions   $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691975.aspx
      */
@@ -2212,7 +2212,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param resource|string|StreamInterface $content   the blob block contents
      * @param Models\CreateBlobBlockOptions   $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd135726.aspx
      */
@@ -2295,7 +2295,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param resource|string|StreamInterface $content   the blob block contents
      * @param Models\AppendBlockOptions       $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/append-block
      */
@@ -2497,7 +2497,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param Models\BlockList|Block[]       $blockList The block entries.
      * @param Models\CommitBlobBlocksOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179467.aspx
      */
@@ -2656,7 +2656,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                       $blob      name of the blob
      * @param Models\ListBlobBlocksOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179400.aspx
      */
@@ -2750,7 +2750,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                          $blob      name of the blob
      * @param Models\GetBlobPropertiesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179394.aspx
      */
@@ -2830,7 +2830,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                        $blob      name of the blob
      * @param Models\GetBlobMetadataOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179350.aspx
      */
@@ -2922,7 +2922,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                           $blob      name of the blob
      * @param Models\ListPageBlobRangesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691973.aspx
      */
@@ -2987,7 +2987,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      *                                                                in `options`
      * @param Models\ListPageBlobRangesOptions $options               optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691973.aspx
      */
@@ -3021,7 +3021,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      *                                                                in `options`
      * @param Models\ListPageBlobRangesOptions $options               optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691973.aspx
      */
@@ -3137,7 +3137,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                          $blob      name of the blob
      * @param Models\SetBlobPropertiesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691966.aspx
      */
@@ -3281,7 +3281,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param array                         $metadata  key/value pair representation
      * @param Models\BlobServiceOptions     $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179414.aspx
      */
@@ -3379,7 +3379,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                $blob      name of the blob
      * @param Models\GetBlobOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179440.aspx
      */
@@ -3440,7 +3440,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                $blob      name of the blob
      * @param Models\GetBlobOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179440.aspx
      */
@@ -3551,7 +3551,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                   $blob      name of the blob
      * @param Models\DeleteBlobOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179413.aspx
      */
@@ -3644,7 +3644,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                           $blob      The name of the blob.
      * @param Models\CreateBlobSnapshotOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691971.aspx
      */
@@ -3745,7 +3745,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * blob
      * @param Models\CopyBlobOptions $options              optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd894037.aspx
      */
@@ -3822,7 +3822,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param Models\CopyBlobFromURLOptions $options              optional
      *                                                            parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd894037.aspx
      */
@@ -3935,7 +3935,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                        $copyId               copy operation identifier.
      * @param Models\BlobServiceOptions     $options              optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/abort-copy-blob
      */
@@ -4057,7 +4057,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      *                                                      expire.
      * @param Models\BlobServiceOptions  $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691972.aspx
      */
@@ -4132,7 +4132,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $proposedLeaseId   the proposed lease id
      * @param Models\BlobServiceOptions $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/lease-blob
      */
@@ -4194,7 +4194,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $leaseId   lease id when acquiring
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/lease-blob
      */
@@ -4252,7 +4252,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $leaseId   lease id when acquiring
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/lease-blob
      */
@@ -4311,7 +4311,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * @param string                    $blob      name of the blob
      * @param Models\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/lease-blob
      */

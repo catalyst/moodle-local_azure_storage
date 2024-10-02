@@ -29,8 +29,8 @@ use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\Psr7\Uri;
-use GuzzleHttp\Promise\RejectedPromise;
+use GuzzleHttpLocal\Psr7\Uri;
+use GuzzleHttpLocal\Promise\RejectedPromise;
 
 /**
  * This class provides the functionality of a middleware that handles all the

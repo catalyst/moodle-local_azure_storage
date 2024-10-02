@@ -25,7 +25,7 @@
 
 namespace MicrosoftAzure\Storage\Common\Internal;
 
-use GuzzleHttp\Psr7\Stream;
+use GuzzleHttpLocal\Psr7\Stream;
 
 /**
  * Utilities for the project

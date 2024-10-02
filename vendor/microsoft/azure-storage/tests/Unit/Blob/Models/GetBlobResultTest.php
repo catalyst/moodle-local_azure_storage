@@ -27,7 +27,7 @@ use MicrosoftAzure\Storage\Common\Internal\Utilities;
 use MicrosoftAzure\Storage\Blob\Models\GetBlobResult;
 use MicrosoftAzure\Storage\Blob\Models\BlobProperties;
 use MicrosoftAzure\Storage\Tests\Framework\TestResources;
-use GuzzleHttp\Psr7;
+use GuzzleHttpLocal\Psr7;
 
 /**
  * Unit tests for class GetBlobResult

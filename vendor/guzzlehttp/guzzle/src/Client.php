@@ -1,9 +1,9 @@
 <?php
-namespace GuzzleHttp;
+namespace GuzzleHttpLocal;
 
-use GuzzleHttp\Cookie\CookieJar;
-use GuzzleHttp\Promise;
-use GuzzleHttp\Psr7;
+use GuzzleHttpLocal\Cookie\CookieJar;
+use GuzzleHttpLocal\Promise;
+use GuzzleHttpLocal\Psr7;
 use Psr\Http\Message\UriInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -45,7 +45,7 @@ class Client implements ClientInterface
      * - handler: (callable) Function that transfers HTTP requests over the
      *   wire. The function is called with a Psr7\Http\Message\RequestInterface
      *   and array of transfer options, and must return a
-     *   GuzzleHttp\Promise\PromiseInterface that is fulfilled with a
+     *   GuzzleHttpLocal\Promise\PromiseInterface that is fulfilled with a
      *   Psr7\Http\Message\ResponseInterface on success. "handler" is a
      *   constructor only option that cannot be overridden in per/request
      *   options. If no handler is provided, a default handler will be created
@@ -57,7 +57,7 @@ class Client implements ClientInterface
      *
      * @param array $config Client configuration settings.
      *
-     * @see \GuzzleHttp\RequestOptions for a list of available request options.
+     * @see \GuzzleHttpLocal\RequestOptions for a list of available request options.
      */
     public function __construct(array $config = [])
     {
@@ -311,7 +311,7 @@ class Client implements ClientInterface
         }
 
         if (isset($options['json'])) {
-            $options['body'] = \GuzzleHttp\json_encode($options['json']);
+            $options['body'] = \GuzzleHttpLocal\json_encode($options['json']);
             unset($options['json']);
             $options['_conditional']['Content-Type'] = 'application/json';
         }

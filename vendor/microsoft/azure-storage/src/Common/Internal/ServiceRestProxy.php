@@ -31,12 +31,12 @@ use MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext;
 use MicrosoftAzure\Storage\Common\Internal\Middlewares\MiddlewareBase;
 use MicrosoftAzure\Storage\Common\Middlewares\MiddlewareStack;
 use MicrosoftAzure\Storage\Common\LocationMode;
-use GuzzleHttp\Promise\EachPromise;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Uri;
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7;
+use GuzzleHttpLocal\Promise\EachPromise;
+use GuzzleHttpLocal\Exception\RequestException;
+use GuzzleHttpLocal\Psr7\Request;
+use GuzzleHttpLocal\Psr7\Uri;
+use GuzzleHttpLocal\Client;
+use GuzzleHttpLocal\Psr7;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -108,7 +108,7 @@ class ServiceRestProxy extends RestProxy
             $options['proxy'] = $proxy;
         }
 
-        return (new \GuzzleHttp\Client(
+        return (new \GuzzleHttpLocal\Client(
             array_merge(
                 $options,
                 array(
@@ -254,7 +254,7 @@ class ServiceRestProxy extends RestProxy
      * @param  string $path           URL path
      * @param  string $body           Request body
      *
-     * @return \GuzzleHttp\Psr7\Request
+     * @return \GuzzleHttpLocal\Psr7\Request
      */
     protected function createRequest(
         $method,
@@ -330,7 +330,7 @@ class ServiceRestProxy extends RestProxy
      * @param  string         $body           Request body
      * @param  ServiceOptions $serviceOptions Service options
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     protected function sendAsync(
         $method,
@@ -440,7 +440,7 @@ class ServiceRestProxy extends RestProxy
      * Sends the context.
      *
      * @param  HttpCallContext $context The context of the request.
-     * @return \GuzzleHttp\Psr7\Response
+     * @return \GuzzleHttpLocal\Psr7\Response
      */
     protected function sendContext(HttpCallContext $context)
     {
@@ -452,7 +452,7 @@ class ServiceRestProxy extends RestProxy
      *
      * @param  HttpCallContext $context The context of the request.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     protected function sendContextAsync(HttpCallContext $context)
     {

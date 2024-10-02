@@ -30,7 +30,7 @@ use MicrosoftAzure\Storage\Common\Internal\Http\HttpFormatter;
 use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
 use MicrosoftAzure\Storage\Table\Internal\IMimeReaderWriter;
 use MicrosoftAzure\Storage\Table\Internal\IODataReaderWriter;
-use GuzzleHttp\Psr7\Response;
+use GuzzleHttpLocal\Psr7\Response;
 
 /**
  * Holds results from batch API.

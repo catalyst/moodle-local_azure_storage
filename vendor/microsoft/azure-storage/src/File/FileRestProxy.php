@@ -55,7 +55,7 @@ use MicrosoftAzure\Storage\File\Models\ListFileRangesResult;
 use MicrosoftAzure\Storage\File\Models\CopyFileResult;
 use MicrosoftAzure\Storage\Common\Internal\Http\HttpFormatter;
 use Psr\Http\Message\StreamInterface;
-use GuzzleHttp\Psr7;
+use GuzzleHttpLocal\Psr7;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses for File
@@ -115,7 +115,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                      and 'properties' to set
      *                                      properties.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function getSharePropertiesAsyncImpl(
         $share,
@@ -186,7 +186,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                       and 'properties' to set
      *                                       properties.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function setSharePropertiesAsyncImpl(
         $share,
@@ -258,7 +258,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                           4MB length min.
      * @param  PutFileRangeOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/put-range
      *
@@ -378,7 +378,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *
      * @param  ListSharesOptions|null $options The optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/list-shares
      */
@@ -470,7 +470,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $share   The share name.
      * @param CreateShareOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-share
      */
@@ -540,7 +540,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $share   name of the share
      * @param FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/delete-share
      */
@@ -608,7 +608,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $share   name
      * @param FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-properties
      */
@@ -645,7 +645,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param int                     $quota   quota of the share
      * @param FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-share-properties
      */
@@ -686,7 +686,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $share   name
      * @param FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-metadata
      */
@@ -723,7 +723,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param array                   $metadata metadata key/value pair.
      * @param FileServiceOptions|null $options optional  parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-share-metadata
      */
@@ -763,7 +763,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $share The share name.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-acl
      */
@@ -859,7 +859,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param ShareACL                $acl     access control list for share
      * @param FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-share-acl
      */
@@ -936,7 +936,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param  string                  $share   The name of the share.
      * @param  FileServiceOptions|null $options The request options.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-stats
      */
@@ -1019,7 +1019,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param  string                              $path    The path to be listed.
      * @param  ListDirectoriesAndFilesOptions|null $options Optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/list-directories-and-files
      */
@@ -1120,7 +1120,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                      $path      The path to create the directory.
      * @param CreateDirectoryOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-directory
      */
@@ -1190,7 +1190,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $path      The path to delete the directory.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/delete-directory
      */
@@ -1257,7 +1257,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $path      The path of the directory.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-directory-properties
      */
@@ -1327,7 +1327,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $path      The path of the directory.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-directory-metadata
      */
@@ -1411,7 +1411,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param array                   $metadata  The metadata to be set.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-directory-metadata
      */
@@ -1493,7 +1493,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param int                    $size    The size of the file.
      * @param CreateFileOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-file
      */
@@ -1620,7 +1620,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $path      The path to delete the file.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/delete-file2
      */
@@ -1688,7 +1688,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string              $path    path of the file to be get
      * @param GetFileOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file
      */
@@ -1778,7 +1778,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $path      The path to delete the file.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file-properties
      */
@@ -1850,7 +1850,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param FileProperties          $properties file properties.
      * @param FileServiceOptions|null $options    optional     parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-file-properties
      */
@@ -1961,7 +1961,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param string                  $path      The path of the file.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file-metadata
      */
@@ -2045,7 +2045,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      * @param array                   $metadata  The metadata to be set.
      * @param FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-file-metadata
      */
@@ -2134,7 +2134,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                                  be put.
      * @param  PutFileRangeOptions|null        $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/put-range
      *
@@ -2333,7 +2333,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                          be cleared.
      * @param  FileServiceOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/put-range
      *
@@ -2426,7 +2426,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                          be listed.
      * @param  FileServiceOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/list-ranges
      *
@@ -2553,7 +2553,7 @@ class FileRestProxy extends ServiceRestProxy implements IFile
      *                                             will not be copied.
      * @param  FileServiceOptions|null $options    The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/copy-file
      *

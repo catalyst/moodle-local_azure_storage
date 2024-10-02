@@ -24,7 +24,7 @@
 
 namespace MicrosoftAzure\Storage\Common\Internal\Authentication;
 
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttpLocal\Psr7\Request;
 use MicrosoftAzure\Storage\Common\Internal\Http\HttpFormatter;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
@@ -292,11 +292,11 @@ class SharedKeyAuthScheme implements IAuthScheme
     /**
      * Adds authentication header to the request headers.
      *
-     * @param  \GuzzleHttp\Psr7\Request $request HTTP request object.
+     * @param  \GuzzleHttpLocal\Psr7\Request $request HTTP request object.
      *
      * @abstract
      *
-     * @return \GuzzleHttp\Psr7\Request
+     * @return \GuzzleHttpLocal\Psr7\Request
      */
     public function signRequest(Request $request)
     {
@@ -305,7 +305,7 @@ class SharedKeyAuthScheme implements IAuthScheme
         $signedKey = $this->getAuthorizationHeader(
             $requestHeaders,
             $request->getUri(),
-            \GuzzleHttp\Psr7\parse_query(
+            \GuzzleHttpLocal\Psr7\parse_query(
                 $request->getUri()->getQuery()
             ),
             $request->getMethod()

@@ -1,5 +1,5 @@
 <?php
-namespace GuzzleHttp\Promise;
+namespace GuzzleHttpLocal\Promise;
 
 /**
  * A promise that has been fulfilled.

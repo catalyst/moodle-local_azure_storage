@@ -26,9 +26,9 @@ namespace MicrosoftAzure\Storage\Tests\Unit\Common\Middlewares;
 
 use MicrosoftAzure\Storage\Common\Middlewares\HistoryMiddleware;
 use MicrosoftAzure\Storage\Tests\Framework\ReflectionTestBase;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttpLocal\Exception\RequestException;
+use GuzzleHttpLocal\Psr7\Response;
+use GuzzleHttpLocal\Psr7\Request;
 
 /**
  * Unit tests for class HistoryMiddleware

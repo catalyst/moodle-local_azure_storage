@@ -61,7 +61,7 @@ interface ITable
      *
      * @param ServiceOptions $options optional table service options.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452238.aspx
      */
@@ -93,7 +93,7 @@ interface ITable
      * @param ServiceProperties $serviceProperties new service properties
      * @param ServiceOptions    $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452240.aspx
      */
@@ -120,7 +120,7 @@ interface ITable
      *
      * @param  ServiceOptions|null $options The options this operation sends with.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-table-service-stats
      */
@@ -144,7 +144,7 @@ interface ITable
      * @param TableModels\QueryTablesOptions|string|Models\Filters\Filter $options
      * Could be optional parameters, table prefix or filter to apply.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/query-tables
      */
@@ -171,7 +171,7 @@ interface ITable
      * @param string                                $table   The name of the table.
      * @param TableModels\TableServiceCreateOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-table
      */
@@ -199,7 +199,7 @@ interface ITable
      * @param string                      $table   The name of the table.
      * @param TableModels\GetTableOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function getTableAsync(
         $table,
@@ -227,7 +227,7 @@ interface ITable
      * @param string                          $table   The name of the table.
      * @param TableModels\TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179387.aspx
      */
@@ -258,7 +258,7 @@ interface ITable
      * @param Models\QueryEntitiesOptions|string|Models\Filters\Filter $options Coule be
      * optional parameters, query string or filter to apply.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/query-entities
      */
@@ -288,7 +288,7 @@ interface ITable
      * @param TableModels\Entity                    $entity  table entity.
      * @param TableModels\TableServiceCreateOptions $options optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/insert-entity
      */
@@ -324,7 +324,7 @@ interface ITable
      * @param TableModels\Entity              $entity  table entity
      * @param TableModels\TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452241.aspx
      */
@@ -359,7 +359,7 @@ interface ITable
      * @param TableModels\Entity              $entity  table entity
      * @param TableModels\TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452242.aspx
      */
@@ -395,7 +395,7 @@ interface ITable
      * @param TableModels\Entity              $entity  The table entity.
      * @param TableModels\TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179427.aspx
      */
@@ -432,7 +432,7 @@ interface ITable
      * @param TableModels\Entity              $entity  The table entity.
      * @param TableModels\TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179392.aspx
      */
@@ -469,7 +469,7 @@ interface ITable
      * @param string                          $rowKey       The entity row key.
      * @param TableModels\DeleteEntityOptions $options      The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd135727.aspx
      */
@@ -515,7 +515,7 @@ interface ITable
      * @param TableModels\GetEntityOptions|null $options      The optional
      *                                                        parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179421.aspx
      */
@@ -545,7 +545,7 @@ interface ITable
      * @param TableModels\BatchOperations     $batchOperations The operations to apply.
      * @param TableModels\TableServiceOptions $options         The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function batchAsync(
         TableModels\BatchOperations $batchOperations,
@@ -573,7 +573,7 @@ interface ITable
      * @param string                          $table   The container name.
      * @param TableModels\TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/get-table-acl
      */
@@ -606,7 +606,7 @@ interface ITable
      * @param TableModels\TableACL            $acl     access control list
      * @param TableModels\TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/set-table-acl
      */

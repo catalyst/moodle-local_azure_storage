@@ -1,5 +1,5 @@
 <?php
-namespace GuzzleHttp\Promise;
+namespace GuzzleHttpLocal\Promise;
 
 interface TaskQueueInterface
 {

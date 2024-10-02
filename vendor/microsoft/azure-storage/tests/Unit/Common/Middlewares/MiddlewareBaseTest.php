@@ -26,10 +26,10 @@ namespace MicrosoftAzure\Storage\Tests\Unit\Common\Middlewares;
 
 use MicrosoftAzure\Storage\Common\Middlewares\MiddlewareBase;
 use MicrosoftAzure\Storage\Tests\Framework\ReflectionTestBase;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Client;
+use GuzzleHttpLocal\Exception\RequestException;
+use GuzzleHttpLocal\Psr7\Response;
+use GuzzleHttpLocal\Psr7\Request;
+use GuzzleHttpLocal\Client;
 
 /**
  * Unit tests for class MiddlewareBase

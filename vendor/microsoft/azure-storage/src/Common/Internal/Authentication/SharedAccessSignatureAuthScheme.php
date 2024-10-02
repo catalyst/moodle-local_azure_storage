@@ -24,7 +24,7 @@
 
 namespace MicrosoftAzure\Storage\Common\Internal\Authentication;
 
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttpLocal\Psr7\Request;
 
 /**
  * Base class for azure authentication schemes.
@@ -60,11 +60,11 @@ class SharedAccessSignatureAuthScheme implements IAuthScheme
     /**
      * Adds authentication header to the request headers.
      *
-     * @param  \GuzzleHttp\Psr7\Request $request HTTP request object.
+     * @param  \GuzzleHttpLocal\Psr7\Request $request HTTP request object.
      *
      * @abstract
      *
-     * @return \GuzzleHttp\Psr7\Request
+     * @return \GuzzleHttpLocal\Psr7\Request
      */
     public function signRequest(Request $request)
     {
@@ -78,7 +78,7 @@ class SharedAccessSignatureAuthScheme implements IAuthScheme
         foreach ($queryValues as $queryField) {
             list($key, $value) = explode('=', $queryField);
 
-            $uri = \GuzzleHttp\Psr7\Uri::withQueryValue($uri, $key, $value);
+            $uri = \GuzzleHttpLocal\Psr7\Uri::withQueryValue($uri, $key, $value);
         }
 
         // replace URI

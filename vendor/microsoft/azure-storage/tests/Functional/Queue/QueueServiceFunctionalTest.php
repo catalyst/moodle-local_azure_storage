@@ -35,9 +35,9 @@ use MicrosoftAzure\Storage\Queue\Models\QueueServiceOptions;
 use MicrosoftAzure\Storage\Common\Middlewares\RetryMiddlewareFactory;
 use MicrosoftAzure\Storage\Common\Middlewares\HistoryMiddleware;
 use MicrosoftAzure\Storage\Common\LocationMode;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\Psr7\Response;
+use GuzzleHttpLocal\Exception\RequestException;
+use GuzzleHttpLocal\Handler\MockHandler;
+use GuzzleHttpLocal\Psr7\Response;
 
 class QueueServiceFunctionalTest extends FunctionalTestBase
 {

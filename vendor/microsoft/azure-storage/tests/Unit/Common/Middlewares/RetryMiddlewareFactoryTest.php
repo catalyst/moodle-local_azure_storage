@@ -27,8 +27,8 @@ namespace MicrosoftAzure\Storage\Tests\Unit\Common\Middlewares;
 use MicrosoftAzure\Storage\Common\Middlewares\RetryMiddlewareFactory;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Tests\Framework\ReflectionTestBase;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttpLocal\Psr7\Response;
+use GuzzleHttpLocal\Psr7\Request;
 
 class RetryMiddlewareFactoryTest extends ReflectionTestBase
 {
