@@ -21,7 +21,12 @@ https://github.com/catalyst/moodle-tool_objectfs
 
 ## Supported Moodle Versions
 
-This plugin requires Moodle 2.6+
+| Branch           | Version support | Notes                                                                                                         |
+| ---------------- | --------------- | ------------------------------------------------------------------------------------------------------------- |
+| MOODLE_42_STABLE | 4.2 +           | Uses an older re-namespaced version of the GuzzleHttp library, due to conflicts with core GuzzleHttp in 4.2+  |
+| master           | 2.6 - 4.1       |                                                                                                               |
+
+Since 17 March 2024 the Azure storage PHP SDK this plugin uses was deprecated and is no longer being maintained. While the API may still work, it is not officially being supported and will slowly become more incompatible with newer versions of PHP. This plugin is not actively maintained.
 
 ## Installation
 
