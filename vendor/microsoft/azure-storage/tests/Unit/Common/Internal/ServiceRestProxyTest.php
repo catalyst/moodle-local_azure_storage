@@ -24,10 +24,10 @@
 
 namespace MicrosoftAzure\Storage\Tests\Unit\Common\Internal;
 
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttpLocal\Exception\RequestException;
+use GuzzleHttpLocal\Handler\MockHandler;
+use GuzzleHttpLocal\HandlerStack;
+use GuzzleHttpLocal\Psr7\Request;
 use MicrosoftAzure\Storage\Common\Internal\ServiceRestProxy;
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Tests\Mock\Common\Internal\Filters\SimpleFilterMock;

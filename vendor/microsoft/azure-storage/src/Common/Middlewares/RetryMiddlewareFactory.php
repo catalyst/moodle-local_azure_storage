@@ -26,7 +26,7 @@ namespace MicrosoftAzure\Storage\Common\Middlewares;
 
 use MicrosoftAzure\Storage\Common\Internal\Resources;
 use MicrosoftAzure\Storage\Common\Internal\Validate;
-use GuzzleHttp\Exception\RequestException;
+use GuzzleHttpLocal\Exception\RequestException;
 
 /**
  * This class provides static functions that creates retry handlers for Guzzle

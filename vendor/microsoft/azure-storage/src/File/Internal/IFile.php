@@ -59,7 +59,7 @@ interface IFile
      *
      * @param ServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file-service-properties
      */
@@ -89,7 +89,7 @@ interface IFile
      * @param ServiceProperties $serviceProperties new service properties.
      * @param ServiceOptions    $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-file-service-properties
      */
@@ -114,7 +114,7 @@ interface IFile
      *
      * @param  FileModels\ListSharesOptions|null $options The optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/list-shares
      */
@@ -141,7 +141,7 @@ interface IFile
      * @param string                             $share   The share name.
      * @param FileModels\CreateShareOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-share
      */
@@ -171,7 +171,7 @@ interface IFile
      * @param  string                             $share   name of the share
      * @param  FileModels\FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/delete-share
      */
@@ -201,7 +201,7 @@ interface IFile
      * @param string                             $share   name
      * @param FileModels\FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-properties
      */
@@ -234,7 +234,7 @@ interface IFile
      * @param int                                $quota   quota of the share
      * @param FileModels\FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-share-properties
      */
@@ -266,7 +266,7 @@ interface IFile
     * @param string                             $share   name
     * @param FileModels\FileServiceOptions|null $options optional parameters
     *
-    * @return \GuzzleHttp\Promise\PromiseInterface
+    * @return \GuzzleHttpLocal\Promise\PromiseInterface
     *
     * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-metadata
     */
@@ -299,7 +299,7 @@ interface IFile
      * @param array                              $metadata metadata key/value pair.
      * @param FileModels\FileServiceOptions|null $options optional  parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-share-metadata
      */
@@ -330,7 +330,7 @@ interface IFile
      * @param string                             $share   The share name.
      * @param FileModels\FileServiceOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-acl
      */
@@ -366,7 +366,7 @@ interface IFile
      * for share
      * @param FileModels\FileServiceOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-share-acl
      */
@@ -397,7 +397,7 @@ interface IFile
      * @param  string                             $share   The name of the share.
      * @param  FileModels\FileServiceOptions|null $options The request options.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-share-stats
      */
@@ -434,7 +434,7 @@ interface IFile
      * @param  string                              $path    The path to be listed.
      * @param  FileModels\ListDirectoriesAndFilesOptions|null $options Optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/list-directories-and-files
      */
@@ -470,7 +470,7 @@ interface IFile
      *                                                          create the directory.
      * @param FileModels\CreateDirectoryOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-directory
      */
@@ -506,7 +506,7 @@ interface IFile
      *                                                      the directory.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/delete-directory
      */
@@ -541,7 +541,7 @@ interface IFile
      * @param string                            $path      The path of the directory.
      * @param FileModelsFileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-directory-properties
      */
@@ -576,7 +576,7 @@ interface IFile
      * @param string                             $path      The path of the directory.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-directory-metadata
      */
@@ -616,7 +616,7 @@ interface IFile
      * @param array                              $metadata  The metadata to be set.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-directory-metadata
      */
@@ -654,7 +654,7 @@ interface IFile
      * @param int                               $size    The size of the file.
      * @param FileModels\CreateFileOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-file
      */
@@ -689,7 +689,7 @@ interface IFile
      * @param string                             $path      The path to delete the file.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/delete-file2
      */
@@ -725,7 +725,7 @@ interface IFile
      * @param string                         $path    path of the file to be get
      * @param FileModels\GetFileOptions|null $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file
      */
@@ -760,7 +760,7 @@ interface IFile
      * @param string                             $path      The path to delete the file.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file-properties
      */
@@ -797,7 +797,7 @@ interface IFile
      * @param FileModels\FileProperties          $properties file properties.
      * @param FileModels\FileServiceOptions|null $options    optional     parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-file-properties
      */
@@ -833,7 +833,7 @@ interface IFile
      * @param string                             $path      The path of the file.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/get-file-metadata
      */
@@ -871,7 +871,7 @@ interface IFile
      * @param array                              $metadata  The metadata to be set.
      * @param FileModels\FileServiceOptions|null $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/set-file-metadata
      */
@@ -915,7 +915,7 @@ interface IFile
      *                                                      be put.
      * @param  FileModels\PutFileRangeOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/put-range
      *
@@ -999,7 +999,7 @@ interface IFile
      *                                                     be cleared.
      * @param  FileModels\FileServiceOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/put-range
      *
@@ -1040,7 +1040,7 @@ interface IFile
      *                                                     be listed.
      * @param  FileModels\FileServiceOptions|null $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/list-ranges
      *
@@ -1111,7 +1111,7 @@ interface IFile
      *                                                        be copied.
      * @param  FileModels\FileServiceOptions|null $options    The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/copy-file
      *

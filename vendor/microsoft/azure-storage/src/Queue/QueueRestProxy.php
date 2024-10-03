@@ -79,7 +79,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      *
      * @param ListQueuesOptions $options The optional list queue options.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function listQueuesAsync(ListQueuesOptions $options = null)
     {
@@ -162,7 +162,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The name of the queue.
      * @param QueueServiceOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function clearMessagesAsync(
         $queueName,
@@ -222,7 +222,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string               $messageText The message contents.
      * @param CreateMessageOptions $options     The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function createMessageAsync(
         $queueName,
@@ -308,7 +308,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string                     $queueName The queue name.
      * @param Models\CreateQueueOptions  $options   The Optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function createQueueAsync(
         $queueName,
@@ -378,7 +378,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * from an earlier call to the Get Messages or Update Message operation.
      * @param QueueServiceOptions $options    The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function deleteMessageAsync(
         $queueName,
@@ -443,7 +443,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param QueueServiceOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function deleteQueueAsync(
         $queueName,
@@ -495,7 +495,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param QueueServiceOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function getQueueMetadataAsync(
         $queueName,
@@ -559,7 +559,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param ListMessagesOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function listMessagesAsync(
         $queueName,
@@ -632,7 +632,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string              $queueName The queue name.
      * @param PeekMessagesOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function peekMessagesAsync(
         $queueName,
@@ -703,7 +703,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param array               $metadata  The metadata array.
      * @param QueueServiceOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function setQueueMetadataAsync(
         $queueName,
@@ -801,7 +801,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param QueueServiceOptions $options                    The optional
      * parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function updateMessageAsync(
         $queueName,
@@ -901,7 +901,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param string                     $queue   The queue name.
      * @param Models\QueueServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/get-queue-acl
      */
@@ -973,7 +973,7 @@ class QueueRestProxy extends ServiceRestProxy implements IQueue
      * @param Models\QueueACL            $acl     access control list for Queue
      * @param Models\QueueServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/set-queue-acl
      */

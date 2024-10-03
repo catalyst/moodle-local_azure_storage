@@ -1,5 +1,5 @@
 <?php
-namespace GuzzleHttp\Promise;
+namespace GuzzleHttpLocal\Promise;
 
 /**
  * A special exception that is thrown when waiting on a rejected promise.

@@ -66,7 +66,7 @@ trait ServiceRestTrait
      *
      * @param ServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452239.aspx
      */
@@ -140,7 +140,7 @@ trait ServiceRestTrait
      * @param ServiceProperties $serviceProperties The service properties.
      * @param ServiceOptions    $options           The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452235.aspx
      */
@@ -213,7 +213,7 @@ trait ServiceRestTrait
      *
      * @param  ServiceOptions|null $options The options this operation sends with.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function getServiceStatsAsync(ServiceOptions $options = null)
     {

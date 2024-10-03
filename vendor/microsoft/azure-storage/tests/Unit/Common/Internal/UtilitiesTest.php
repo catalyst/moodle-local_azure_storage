@@ -30,7 +30,7 @@ use MicrosoftAzure\Storage\Tests\Framework\TestResources;
 use MicrosoftAzure\Storage\Tests\Framework\VirtualFileSystem;
 use MicrosoftAzure\Storage\Common\Models\ServiceProperties;
 use MicrosoftAzure\Storage\Common\Internal\Serialization\XmlSerializer;
-use GuzzleHttp\Psr7;
+use GuzzleHttpLocal\Psr7;
 
 /**
  * Unit tests for class Utilities

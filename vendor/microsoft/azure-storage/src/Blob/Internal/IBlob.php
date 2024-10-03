@@ -60,7 +60,7 @@ interface IBlob
      *
      * @param ServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452239.aspx
      */
@@ -99,7 +99,7 @@ interface IBlob
      *
      * @param  ServiceOptions|null $options The options this operation sends with.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see  https://docs.microsoft.com/en-us/rest/api/storageservices/get-blob-service-stats
      */
@@ -114,7 +114,7 @@ interface IBlob
      * @param ServiceProperties           $serviceProperties new service properties.
      * @param ServiceOptions $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452235.aspx
      */
@@ -140,7 +140,7 @@ interface IBlob
      *
      * @param  BlobModels\ListContainersOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function listContainersAsync(
         BlobModels\ListContainersOptions $options = null
@@ -167,7 +167,7 @@ interface IBlob
      * @param string                            $container The container name.
      * @param BlobModels\CreateContainerOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179468.aspx
      */
@@ -197,7 +197,7 @@ interface IBlob
      * @param  string                             $container name of the container
      * @param  BlobModels\BlobServiceOptions      $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function deleteContainerAsync(
         $container,
@@ -225,7 +225,7 @@ interface IBlob
      * @param string                        $container name
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179370.aspx
      */
@@ -256,7 +256,7 @@ interface IBlob
      * @param string                        $container name
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691976.aspx
      */
@@ -288,7 +288,7 @@ interface IBlob
      * @param string                        $container The container name.
      * @param BlobModels\BlobServiceOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179469.aspx
      */
@@ -322,7 +322,7 @@ interface IBlob
      * @param BlobModels\ContainerACL       $acl       access control list for container
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179391.aspx
      */
@@ -356,7 +356,7 @@ interface IBlob
      * @param array                         $metadata  metadata key/value pair.
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179362.aspx
      */
@@ -387,7 +387,7 @@ interface IBlob
      * @param string                      $container The container name.
      * @param BlobModels\ListBlobsOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd135734.aspx
      */
@@ -433,7 +433,7 @@ interface IBlob
      *                                                512-byte boundary.
      * @param BlobModels\CreateBlobOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -471,7 +471,7 @@ interface IBlob
      * @param string                   $blob      The blob name.
      * @param Models\CreateBlobOptions $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -519,7 +519,7 @@ interface IBlob
      * @param string|resource|StreamInterface $content   The content of the blob.
      * @param BlobModels\CreateBlobOptions    $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179451.aspx
      */
@@ -561,7 +561,7 @@ interface IBlob
      * @param string|resource|StreamInterface $content   The content of the blob.
      * @param BlobModels\CreateBlobOptions    $options   The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/get-blob-properties
      */
@@ -605,7 +605,7 @@ interface IBlob
      *                                                     512-1023)
      * @param BlobModels\CreateBlobPagesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691975.aspx
      */
@@ -649,7 +649,7 @@ interface IBlob
      * @param string|resource|StreamInterface   $content   the blob contents.
      * @param BlobModels\CreateBlobPagesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691975.aspx
      */
@@ -701,7 +701,7 @@ interface IBlob
      * @param resource|string|StreamInterface     $content   the blob block contents
      * @param BlobModels\CreateBlobBlockOptions   $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd135726.aspx
      */
@@ -740,7 +740,7 @@ interface IBlob
      * @param resource|string|StreamInterface $content   the blob block contents
      * @param Models\AppendBlockOptions       $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/append-block
      */
@@ -795,7 +795,7 @@ interface IBlob
      *                                                           entries
      * @param BlobModels\CommitBlobBlocksOptions      $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179467.aspx
      */
@@ -847,7 +847,7 @@ interface IBlob
      * @param string                           $blob      name of the blob
      * @param BlobModels\ListBlobBlocksOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179400.aspx
      */
@@ -881,7 +881,7 @@ interface IBlob
      * @param string                              $blob      name of the blob
      * @param BlobModels\GetBlobPropertiesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179394.aspx
      */
@@ -915,7 +915,7 @@ interface IBlob
      * @param string                            $blob      name of the blob
      * @param BlobModels\GetBlobMetadataOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179350.aspx
      */
@@ -952,7 +952,7 @@ interface IBlob
      * @param string                               $blob      name of the blob
      * @param BlobModels\ListPageBlobRangesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691973.aspx
      */
@@ -1008,7 +1008,7 @@ interface IBlob
      *                                                                      in `options`
      * @param BlobModels\ListPageBlobRangesOptions $options                 optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691973.aspx
      */
@@ -1043,7 +1043,7 @@ interface IBlob
      * @param string                              $blob      name of the blob
      * @param BlobModels\SetBlobPropertiesOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691966.aspx
      */
@@ -1080,7 +1080,7 @@ interface IBlob
      * @param array                             $metadata  key/value pair representation
      * @param BlobModels\BlobServiceOptions     $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179414.aspx
      */
@@ -1117,7 +1117,7 @@ interface IBlob
      * @param string                    $blob      name of the blob
      * @param BlobModels\GetBlobOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179440.aspx
      */
@@ -1159,7 +1159,7 @@ interface IBlob
      * @param string                       $blob      name of the blob
      * @param BlobModels\DeleteBlobOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179413.aspx
      */
@@ -1196,7 +1196,7 @@ interface IBlob
      * @param BlobModels\CreateBlobSnapshotOptions $options   The optional
      *                                                        parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691971.aspx
      */
@@ -1242,7 +1242,7 @@ interface IBlob
      *                                                         blob
      * @param BlobModels\CopyBlobOptions $options              optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd894037.aspx
      */
@@ -1295,7 +1295,7 @@ interface IBlob
      * @param BlobModels\CopyBlobFromURLOptions $options              optional
      *                                                                parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd894037.aspx
      */
@@ -1333,7 +1333,7 @@ interface IBlob
      * @param string                        $copyId               copy operation identifier.
      * @param BlobModels\BlobServiceOptions $options              optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/abort-copy-blob
      */
@@ -1380,7 +1380,7 @@ interface IBlob
      *                                                      Default is never to expire.
      * @param Models\BlobServiceOptions  $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691972.aspx
      */
@@ -1422,7 +1422,7 @@ interface IBlob
      * @param string                        $proposedLeaseId   the proposed lease id
      * @param BlobModels\BlobServiceOptions $options           optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/lease-blob
      */
@@ -1461,7 +1461,7 @@ interface IBlob
      * @param string                        $leaseId   lease id when acquiring
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691972.aspx
      */
@@ -1502,7 +1502,7 @@ interface IBlob
      * @param string                        $leaseId   lease id when acquiring
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691972.aspx
      */
@@ -1540,7 +1540,7 @@ interface IBlob
      * @param string                        $blob      name of the blob
      * @param BlobModels\BlobServiceOptions $options   optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/ee691972.aspx
      */

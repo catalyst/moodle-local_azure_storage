@@ -32,7 +32,7 @@ use MicrosoftAzure\Storage\Common\Internal\Http\HttpCallContext;
 use MicrosoftAzure\Storage\Table\Models\BatchOperation;
 use MicrosoftAzure\Storage\Table\Models\BatchOperationType;
 use MicrosoftAzure\Storage\Table\Models\UpdateEntityResult;
-use GuzzleHttp\Psr7\Response;
+use GuzzleHttpLocal\Psr7\Response;
 
 /**
  * Resources for testing framework.

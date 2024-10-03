@@ -29,7 +29,7 @@ use MicrosoftAzure\Storage\Common\Internal\Utilities;
 use MicrosoftAzure\Storage\Common\Internal\Serialization\MessageSerializer;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\Promise\RejectedPromise;
+use GuzzleHttpLocal\Promise\RejectedPromise;
 
 /**
  * This class provides the functionality to log the requests/options/responses.

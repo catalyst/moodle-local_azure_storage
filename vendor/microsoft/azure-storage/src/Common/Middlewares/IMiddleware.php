@@ -58,7 +58,7 @@ interface IMiddleware
      *        },
      *        function ($reason) use ($request, $options) {
      *            //do something
-     *            return new GuzzleHttp\Promise\RejectedPromise($reason);
+     *            return new GuzzleHttpLocal\Promise\RejectedPromise($reason);
      *        }
      *    );
      * };

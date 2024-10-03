@@ -24,7 +24,7 @@
 
 namespace MicrosoftAzure\Storage\Common\Internal\Authentication;
 
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttpLocal\Psr7\Request;
 
 /**
  * Interface for azure authentication schemes.
@@ -42,11 +42,11 @@ interface IAuthScheme
     /**
      * Signs a request.
      *
-     * @param  \GuzzleHttp\Psr7\Request $request HTTP request object.
+     * @param  \GuzzleHttpLocal\Psr7\Request $request HTTP request object.
      *
      * @abstract
      *
-     * @return \GuzzleHttp\Psr7\Request
+     * @return \GuzzleHttpLocal\Psr7\Request
      */
     public function signRequest(Request $request);
 }

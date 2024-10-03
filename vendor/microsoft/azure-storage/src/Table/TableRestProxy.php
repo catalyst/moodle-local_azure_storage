@@ -483,7 +483,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param boolean             $useETag The flag to include etag or not.
      * @param TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     private function putOrMergeEntityAsyncImpl(
         $table,
@@ -702,7 +702,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      *                                                  parameters, table prefix
      *                                                  or filter to apply.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/query-tables
      */
@@ -826,7 +826,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param string                    $table   The name of the table.
      * @param TableServiceCreateOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-table
      */
@@ -897,7 +897,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param string          $table   The name of the table.
      * @param GetTableOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function getTableAsync(
         $table,
@@ -964,7 +964,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param string              $table   The name of the table.
      * @param TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179387.aspx
      */
@@ -1025,7 +1025,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      *                                                    string or filter to
      *                                                    apply.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/query-entities
      */
@@ -1134,7 +1134,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param Entity                    $entity  table entity.
      * @param TableServiceCreateOptions $options optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/insert-entity
      */
@@ -1193,7 +1193,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param Entity              $entity  table entity
      * @param TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452241.aspx
      */
@@ -1242,7 +1242,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param Entity              $entity  table entity
      * @param TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/hh452242.aspx
      */
@@ -1288,7 +1288,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param Entity              $entity  The table entity.
      * @param TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179427.aspx
      */
@@ -1335,7 +1335,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param Entity              $entity  The table entity.
      * @param TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179392.aspx
      */
@@ -1382,7 +1382,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param string              $rowKey       The entity row key.
      * @param DeleteEntityOptions $options      The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd135727.aspx
      */
@@ -1436,7 +1436,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param string                $rowKey       The entity row key.
      * @param GetEntityOptions|null $options      The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see http://msdn.microsoft.com/en-us/library/windowsazure/dd179421.aspx
      */
@@ -1514,7 +1514,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param BatchOperations     $batchOperations The operations to apply.
      * @param TableServiceOptions $options         The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      */
     public function batchAsync(
         Models\BatchOperations $batchOperations,
@@ -1595,7 +1595,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param string              $table   The table name.
      * @param TableServiceOptions $options The optional parameters.
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/get-table-acl
      */
@@ -1673,7 +1673,7 @@ class TableRestProxy extends ServiceRestProxy implements ITable
      * @param TableACL            $acl     access control list for Table
      * @param TableServiceOptions $options optional parameters
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @return \GuzzleHttpLocal\Promise\PromiseInterface
      *
      * @see https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/set-table-acl
      */
