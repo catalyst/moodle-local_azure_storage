@@ -1,3 +1,10 @@
+# Archive notice
+This plugin is archived as was based off a Microsoft library that is now no longer maintained.
+
+The `MOODLE_42_STABLE` branch of this plugin fixes fatal GuzzleHttp errors in newer Moodle versions, however, this is not recommended for long term use.
+
+If you still need to use Azure object storage in `tool_objectfs`, see https://github.com/catalyst/moodle-tool_objectfs/blob/MOODLE_404_STABLE/MIGRATION.md#migrating-from-local_azure_storage-to-local_azureblobstorage
+
 # Azure Storage SDK - Moodle Plugin
 
 A moodle plugin containing the Microsoft Azure Storage SDK for PHP.
